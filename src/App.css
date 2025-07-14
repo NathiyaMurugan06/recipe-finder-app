@@ -1,0 +1,220 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.app-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.toggle-theme {
+  background: none;
+  border: 2px solid #007bff;
+  color: #007bff;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.toggle-theme:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* SearchBar */
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  padding: 0.6rem 1.2rem;
+  background: #28a745;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background: #218838;
+}
+
+/* Recipe Grid */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.recipe-info {
+  padding: 0.8rem;
+  text-align: center;
+}
+
+/* Recipe Card */
+.recipe-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card:focus {
+  outline: 2px solid #007bff;
+}
+
+
+.recipe-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.recipe-card h3 {
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.modal .ingredients {
+  margin-bottom: 1rem;
+}
+
+.modal .instructions {
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+}
+
+.modal .video-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.modal .close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ff4d4f;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Dark Mode */
+.dark {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+}
+
+.dark .app-container {
+  background-color: #1a1a1a;
+}
+
+.dark .recipe-card {
+  background: #2b2b2b;
+  color: #f0f0f0;
+}
+
+.dark .recipe-card h3 {
+  color: #f0f0f0;
+}
+
+.dark .modal {
+  background: #2b2b2b;
+  color: white;
+}
+
+.dark .toggle-theme {
+  border-color: #f0f0f0;
+  color: #f0f0f0;
+}
+
+.dark .toggle-theme:hover {
+  background: #f0f0f0;
+  color: #1a1a1a;
+}
+
+.dark .search-bar input,
+.dark .search-bar select {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
