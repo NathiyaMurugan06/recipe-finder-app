@@ -19,13 +19,6 @@ A sleek and user-friendly React web application to discover delicious recipes fr
 
 ---
 
-## 📸 Preview
-
-![App Screenshot](https://user-images.githubusercontent.com/your-screenshot-link)  
-<!-- 📝 Replace the link above with a real screenshot or preview GIF -->
-
----
-
 ## 🛠️ Tech Stack
 
 - **Frontend:** React, CSS
